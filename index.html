@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Numbers trivia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid" id="FirstPart">
+        <div class="container">
+            <h1 class="display-3">Welcom to the Numbers Trivia!</h1>
+            <p class="lead">a set of 5 questions <br> you have 10 seconds to answer</p>
+            <hr class="my-2">
+            <p id="lead">Click the button to Start</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg align-center text-white" id="button" role="button">Start Trivia!</a>
+            </p>
+            <div class="row Game-Results">
+                <ul class="list-group col-6">
+                    <li class="list-group-item d-flex justify-content-between align-items-center disabled">
+                        Last Game Results.
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Correct:
+                        <span class="badge badge-secondary badge-pill Results-Correct"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        UnAnswered:
+                        <span class="badge badge-secondary badge-pill Results-UnAnswer"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Wrong:
+                        <span class="badge badge-secondary badge-pill Results-Wrong"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="Questions">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 id="Question"> Here goes the question!!</h2>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 id="Timer"> Time Left:</h3>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <ul class="list-group col-6 text-center">
+                <li class="list-group-item list-group-item-action Response" id="R0" data-click="0">Active item</li>
+                <li class="list-group-item list-group-item-action Response" id="R1" data-click="1">Item</li>
+                <li class="list-group-item list-group-item-action Response" id="R2" data-click="2">Disabled item</li>
+                <li class="list-group-item list-group-item-action Response" id="R3" data-click="3">Disabled item</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="container row" id="Response">
+        <div class="col-3"></div>
+            <div class="card center col-6"  style="height: 18rem;">
+                <img class="card-img-top ResponseGif" alt="response gif" >
+                <div class="card-body">
+                    <h5 class="card-title ResponseTitle">Special title treatment</h5>
+                    <p class="card-text ResponseText">the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/functions.js"></script>
+  <script src="assets/javascript/app.js"></script>
+ 
+</body>
+
+</html>
