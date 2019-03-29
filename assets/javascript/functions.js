@@ -39,7 +39,7 @@ function Qtimer (x){
                 method: "GET"
                 }).then(function(response) {
                     $(".ResponseGif").attr("src",response.data[Math.floor(Math.random()*10)].images.original.url)
-                console.log("dentro de timeout ajax" + response.data[0].images.original.url);
+                
             });
 
 
@@ -69,7 +69,7 @@ function NextQ (){
         ResponseNumb = Math.floor(Math.random()*100);
         var Q = "";
         var arrQ = [];
-        var queryURL = "http://numbersapi.com/"+ResponseNumb+"/trivia";
+        var queryURL = "https://numbersapi.com/"+ResponseNumb+"/trivia";
 
         $("#FirstPart").hide();
         $("#Questions").show();
@@ -80,7 +80,6 @@ function NextQ (){
             }).then(function(response) {
             QuestionText = response;
 
-            console.log(QuestionText)
 
             for (let i = 0; i < QuestionText.length ; i++) {
                 if(numbers.includes(QuestionText[i]) && i<4){
@@ -95,7 +94,6 @@ function NextQ (){
             };
 
             $("#Question").text(Q);
-            console.log(ResponseNumb, QuestionText,Q, "click on the button");
         });
 
         Qtimer(10);

@@ -22,7 +22,6 @@ $(".Response").on("click", function(){
     Qtimer(5);
     $("#Questions").hide();
     $("#Response").show();
-    console.log("numero de respuesta", $(this).attr("data-click"));
     if(($(this).attr("data-click") == PositionResp[QuestionNumb]) && QuestionNumb < 5 ){
         $(".ResponseTitle").text("Congratulations!");
         $(".ResponseText").text("That was correct!");
@@ -36,7 +35,7 @@ $(".Response").on("click", function(){
             method: "GET"
             }).then(function(response) {
                 $(".ResponseGif").attr("src",response.data[Math.floor(Math.random()*10)].images.original.url)
-            console.log("dentro de ajax" + response.data[0].images.original.url);
+            
         });
 
         setTimeout(function(){
@@ -44,7 +43,6 @@ $(".Response").on("click", function(){
             $(".ResponseGif").attr("src","");
             $("#Response").hide();
         },5000);
-    console.log("dentro de if data click"+ $(this).attr("data-click"), PositionResp[QuestionNumb], QuestionNumb)
     }
     else if (QuestionNumb < 5) {
         
@@ -60,7 +58,7 @@ $(".Response").on("click", function(){
             method: "GET"
             }).then(function(response) {
                 $(".ResponseGif").attr("src",response.data[Math.floor(Math.random()*10)].images.original.url)
-            console.log("dentro de ajax" + response.data[0].images.original.url);
+
         });
         setTimeout(function(){
             NextQ();
