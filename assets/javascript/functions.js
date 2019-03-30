@@ -33,7 +33,7 @@ function Qtimer (x){
                 $("#Response").hide();
             },5000);
             
-            queryURL = "https://api.giphy.com/v1/gifs/search?api_key=TFi9rHvgaCJV26uk7uT6C6aM1JlSFryF&q=Time+out&limit=25&offset=0&rating=G&lang=en"
+            queryURL = "https://api.giphy.com/v1/gifs/search?api_key=TFi9rHvgaCJV26uk7uT6C6aM1JlSFryF&q=Times+up&limit=25&offset=0&rating=G&lang=en"
             $.ajax({
                 url: queryURL,
                 method: "GET"
