@@ -69,7 +69,7 @@ function NextQ (){
         ResponseNumb = Math.floor(Math.random()*100);
         var Q = "";
         var arrQ = [];
-        var queryURL = "https://numbersapi.com/"+ResponseNumb+"/trivia";
+        var queryURL = "http://numbersapi.com/"+ResponseNumb+"/trivia";
 
         $("#FirstPart").hide();
         $("#Questions").show();
